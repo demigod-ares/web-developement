@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Second Javascript</title>
+</head>
+<style>
+    #btn1{padding:5px; background-color:black;border: 2px solid red; color: white; cursor:pointer}
+    #timeDis{color: white; font-size: 24px; font-weight: bold; background-color: black; border: 5px solid red; padding: 2px; margin: 4px; text-align: center;}
+</style>
+<body>
+    <p>Go to console in your web browser to check the logs!</p><hr>
+    <div class="contain">
+        <h1>Interaction (alert, prompt, confirm)</h1>
+        <div class="contain">
+            <p id="ID1_1">Alert function in Javascript pops up a message string in your browser. The pop up is shown in a modal window, you can't access the page content unless you close modal window. Alert function doesn't return anything. On the contrary, prompt displays a message and asks for the user input. It is optional to provide default user input along with the message in prompt. Prompt returns same value as user input. In addition, confirm asks a Yes or No question and returns true or false respectively.</p>
+        </div><hr>
+        
+        <h1>Navigating the DOM</h1>
+        <div class="contain">
+            <p id="ID1_2"> This paragraph is made accessible through console by providing it's ID to the <strong>document.getElementById("ID")</strong> function. Drag on the item shown as the log of console to see its location. You can type <strong>elementID.innerHTML</strong> inside your browser console to extract the HTML inside element and <strong>elementID.innerText</strong> to extract it's content. You will also understand why you should <strong>NOT</strong> include a dot inside any of the ID or Class. Similarly you can access all the elements in a class by console using <strong>document.getElementsByClassName("class")</strong> method, which gives an array of each element of class. You may store this array in a variable and type <strong>variable[index]</strong> in console to access a particular element of class. CSS selectors can also be accessed in a similar fashion using <strong>document.querySelector('#ID')</strong> to access using ID and <strong>document.querySelector('.class')</strong> to access using Class. <strong>document.querySelector('#ID>element')</strong> is used to extract first occoring child of element type in ID. And <strong>document.querySelectorAll('#ID>element')</strong> method will extract all child of element type in ID. These methods are sufficient, try avoiding any other method to grab information. You can also change these contents using <strong>variable.innerHTML = value</strong> command in console once they are extracted assigned to a variable. <b class="change" id="change">Try changing this!</b> Note that you can change using ID but not using class variable, use get elements by class to make an array and change individual array element.</p>
+        </div><hr>
+
+        <h1>Events and listening to Events</h1>
+        <div class="contain">
+            <p id="ID1_3">There are many Browser events like click, contextmenu, mouse related events (mouseover, mouseout, mouseup, mousedown, mousemove), form related events (submit, focus), DOMContent loaded, transistioned etc. The button below can show or hide this paragraph, because a suitable JS function is given in the "onclick" attribute.</p><p id="para">Try moving your mouse over this paragraph to listen to this event! You have to be strict with the syntax of <strong>addEventListener</strong> method to make this work. Check the console.</p>
+        </div><button id="btn1" onclick="toggleHide()">Show / Hide</button><hr>
+        
+        <h1>Timing methods!</h1>
+        <div class="contain">
+            <p id="ID1_4">The <strong>setTimeout()</strong> method calls a function or evaluates an expression after a specified number of milliseconds. This function is only executed once. Use the <strong>clearTimeout(timeOutID)</strong> method to prevent the function running. <strong>setInterval()</strong> method calls a function or evaluates an expression at specified intervals in milliseconds. It will continue calling the function until clearInterval() method is called or the window is closed.</p>
+        </div><hr>
+
+        <h1>Date & Time</h1>
+        <div class="contain">
+            <p id="ID1_5">we are going to learn about the date object. We will learn how to set, initialize, and get the date through JavaScript. You will learn how to get current date and time, reference D&T, user defined D&T. Also, you can manipulate existing date variable using various setter methods  Time of loading this page is... <p><span id="timeDis"></span></p></p>
+        </div><hr>
+
+        <h1>Arrow Function</h1>
+        <div class="contain">
+            <p id="ID1_5">An arrow function (symbol : =>) expression is a syntactically compact alternative to a regular function expression, it is used for implementing functions quickly. Unlike regular function, lambda function has no bindings to this, arguments, super or new.target keywords. Arrow function expressions are ill-suited as methods, and they cannot be used as constructors.</p>
+        </div><hr>
+        
+        <h1>Math Objects & Function</h1>
+        <div class="contain">
+            <p id="ID1_5">Now, we are going to see different Math objects used in JavaScript. These are important to use different mathematical functions in their browser. This function allows us to perform mathematical tasks on numbers. You may call the "Math" directly or else you may create it's object to use it's features.</p>
+        </div><hr>
+
+        <h1>JSON in JavaScript</h1>
+        <div class="contain">
+            <p id="ID1_5">Now, we are going to learn about the concept of JSON in JavaScript. JSON is a format for storing and transporting data. JSON is often used when data is sent from a server to a web page.So, what is JSON?
+                <ul>
+                    <li>JSON stands for JavaScript Object Notation</li>
+                    <li>JSON is a lightweight data-interchange format</li>
+                    <li>JSON is language independent</li>
+                    <li>JSON is "self-describing" and easy to understand</li>
+                </ul>
+            The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. The code for reading and generating JSON data can be written in any programming language.</p>
+        </div><hr>
+
+
+    </div>
+
+    <script>
+
+        // Alert, Prompt and Confirm //
+        // let a = alert("This is an alert message which pops up everytime page is loaded");
+        // console.log(a); // no return!
+        // alert("Another alert!");
+
+        // a = prompt("Enter something please!","your text here");
+        // console.log("You have entered... " + a);
+
+        // a = confirm("Choose yes for true and no for false.");
+        // console.log("You have entered... " + a);
+        
+        // Navigating the DOM //
+        // let main = document.getElementById("ID1_2_1");
+        // console.log("Extracted HTML ID is ...", main);
+        
+        // let container = document.getElementsByClassName("contain");
+        // console.log("Extracted HTML Class is ...", container);
+        
+        // let selID = document.querySelector('#ID1_2');
+        // console.log("Extracted CSS ID is ...", selID);
+        // let selIDElement = document.querySelector('#ID1_2>strong');
+        // console.log("Extracted first child of strong element type using CSS ID, which is ...", selIDElement);
+        // let selIDElementAll = document.querySelectorAll('#ID1_2>strong');
+        // console.log("Extracted all child of strong element type using CSS ID, which is ...", selIDElementAll);
+
+        // let selClass = document.querySelector('.contain');
+        // console.log("Extracted CSS Class is ...", selClass);
+        // // Changing element
+        // let changeID = document.getElementById("change");
+        // console.log("Extracted HTML ID is ...", changeID);
+        // let changeClass = document.getElementsByClassName("change"); 
+        // console.log("Extracted HTML Class is ...", changeClass, " and you can't change using this variable, because this is an array. Try variable[index].innerHTML");
+
+        // Events! //
+        // let newPara = document.getElementById("para");
+        // newPara.addEventListener('mouseover' , function mouseOver(){console.log("Mouse over paragraph!");});
+        // newPara.addEventListener('mouseout' , function mouseOut(){console.log("Mouse outside paragraph!");});
+
+        // function toggleHide(){
+        //     let para = document.getElementById('ID1_3');
+        //     if(para.style.display != 'none') para.style.display = 'none';
+        //     else para.style.display = 'block';
+        // }
+        
+        // Methods using time
+        // function greet(){
+        //     console.log("Hello, see the greeting message before & after a delay of 3 seconds.");
+        // }
+        // greet();
+        // toID1 = setTimeout(greet, 3000);
+
+        // function yourName(name){ // calling yourName("Siddharth"); will work
+        //     console.log("Hello "+ name + ", nice to see you. Thanks for waiting 5 seconds.");
+        // }
+        // toID2 = setTimeout(yourName, 5000, "Siddharth");
+        // clearTimeout(toID1);
+        // function repeat(){
+        //     console.log("This message will be repeated every 2 seconds.");
+        // }
+        // intID1 = setInterval(repeat, 2000);
+        // clearInterval(intID1);
+        // // Time display
+        // function disTime(){
+        //     time = new Date();
+        //     console.log(time);
+        //     document.getElementById('timeDis').innerHTML = time;
+        // }
+        // intID2 = setInterval(disTime, 1000);
+        // clearInterval(intID2);
+
+        // Date and Time
+        // let now = new Date(); // current date time
+        // console.log(now);
+        // let refDate = new Date(2000); // 2 sec delay from reference time in 1970
+        // console.log(refDate);
+        // let myDate = new Date("2025-01-30"); // User defined date
+        // console.log(myDate);
+        // // format for user defined Date with time is (year, month, date, hours, minutes, seconds, milliseconds);
+        // myDate = new Date(1992, 12, 6, 17, 24, 0, 0);
+        // console.log(myDate);
+        // console.log("The year is ", myDate.getFullYear());
+        // myDate.setDate(26);
+        // myDate.setMonth(8);
+        // myDate.setDate(1991);
+        // console.log(myDate);
+        // // Time display
+        // function disTime(){
+        //     time = new Date();
+        //     console.log(time);
+        //     document.getElementById('timeDis').innerHTML = time;
+        // }
+        // disTime();
+
+        // Arrow function
+        // let greet = () => console.log('Good morning');
+        // greet();
+        // greet = () => {
+        //     console.log('Good morning again'); console.log('Good morning once more'); }
+        // greet();
+
+        // setTimeout(() => { // arrow function inside set timeout
+        // console.log("We are inside settimeout");
+        // }, 3000);
+
+        // // run below functions in console
+        // let half = (a) => a/2;
+        // let square = (a) => a**2;
+        // let sum = (a,b) => a+b;
+
+        // let obj = {
+        //     text : "Parent class text",
+        //     names : ["name1","name2","name3","name4"],
+        //     speak(){ // no binding, this refers to the parent class
+        //         text = "Child class text";
+        //         this.names.forEach((i) => console.log(this.text + " with " + i));
+        //     }
+        // }
+        // obj.speak();
+
+        // obj = {
+        //     text : "Parent class text",
+        //     names : ["name1","name2","name3","name4"],
+        //     speak(){ // this refers to itself
+        //             this.names.forEach(function func(i) {
+        //             text = "Child class text";
+        //             console.log(this.text + " with " + i);
+        //         });
+        //     }
+        // }
+        // obj.speak();
+
+        // Math objects and functions
+        // console.log(Math); // this will display entire list of items available inside math object
+        // let m = Math;
+        // console.log(m); // this will display entire list of items available inside math object
+        // // Printing the constants from Math Object
+        // console.log("The value of Math.E is ", Math.E);
+        // console.log("The value of Math.PI is ", m.PI);
+        // console.log("The value of Math.LN2 is ", Math.LN2);
+        // console.log("The value of Math.SQRT1_2 is ", m.SQRT1_2);
+        // console.log("The value of Math.LOG2E is ", Math.LOG2E);
+        // // Math functions
+        // let a = 34.64534;
+        // let b = 89.366;
+        // console.log("The value of a and b is ", a," and ", b, " respectively.");
+        // console.log("The value of a and b rounded off is ", Math.round(a)," and ", m.round(b), " respectively.");
+        // console.log("5.8 rounded up to nearest integer is ", Math.ceil(5.8));
+        // console.log("5.8 rounded down to nearest integer is ", m.floor(5.8));
+        // console.log("The value of sin(pi/2) is ", m.sin(m.PI/2));
+        // console.log("The value of tan(pi/2) is ", Math.tan(Math.PI/2));
+        // console.log("The value of cos(pi/2) is ", Math.cos(Math.PI/2));
+        // console.log("Minimum value of 0, 24 , 55, 16 is ", m.min(0, 24 , 55, 16));
+        // console.log("Maximum value of 14, 18, 25, 6 is ", Math.max(14, 18, 25, 6));
+        // console.log("The random number is ", Math.random());
+        // // to generate a random number between a and b
+        // console.log("The random number beetween ", a," and ",b , " is ", a + (b - a)*Math.random());
+
+        //JSON in JavaScript
+        let jsonObj = { name: "Siddharth", company: "IBM", role1: "Full stack developement", food: "BlockChain Developement" }; 
+        console.log(jsonObj);
+        let myJsonStr = JSON.stringify(jsonObj); // convert to string
+        console.log(myJsonStr);
+        myJsonStr = myJsonStr.replace('IBM', 'Google'); // modify string
+        console.log(myJsonStr);
+        newJsonObj = JSON.parse(myJsonStr); // parse the string back to JSON
+        console.log(newJsonObj);
+
+
+        
+
+
+
+
+
+    </script>
+</body>
+</html>

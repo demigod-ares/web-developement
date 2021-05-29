@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First JavaScript</title>
+</head>
+
+<body>
+    <p>Go to console in your web browser to check the logs!</p><hr>
+    <div class="contain1">
+        
+        <h1>Variables, Data Types & Operator in JavaScript</h1>
+        <div class="cont1.1">
+            <p>Check the script in the source code. It will show that there are no identifiers or keywords to define data types. This is called as dynamic typing, where JavaScript will automatically assign data types. Note that variable c is not declared with keyword "var", but still it works. In addition, redeclaring any variable is not allowed but reassignment is allowed.</p>
+        </div>
+        <div class="cont1.2">
+            <p>There are 2 types of operator in JS. They are Unary operator and Binary operator. <ul><li>Unary operator work on single operand</li><li>Binary operator operates on single operand.</li></ul> Note that concatination is allowed inside console.log() function using + operator.</p>
+        </div><hr>
+
+        <h1>Scope and Functions</h1>
+        <div class="cont1.3">
+                <p>Unlike other languages, redeclaring a variable in JS doesn't gives an error. We use 'let' keyword to keep the variable limited to the block. Try to use 'let' instead of 'var'. However, you may use 'const' keyword to declare fixed values and changing these values will give an error. Functions are used for code reusablity. Functions also have the same implementation in JS as that of C language.</p>
+        </div><hr>
+
+        <h1>Strings and String functions in JavaScript</h1>
+        <div class="cont1.4">
+            <p>It's easy to deal with Strigs in Java Script. It is interesting to understand the use of `` quotes. Escape sequence like \n is also available in JavaScript. There are methods to dynammically add to the content of html element using their class and ID using strings. But we will focus on more important <strong><em>"string functions"</em></strong>.</p>
+            <ul>
+                <li>Number of character in a String is given by <strong>String.length</strong> function.</li>
+                <li>Index of first occorance of subset of string is given by <strong>String.indexOf("item to be searched")</strong> function.</li>
+                <li>A subset of string is extracted using <strong>String.slice(starting position, ending position)</strong> function. It can take negative values as well.</li>
+                <li><strong>String.substring(starting position, ending position)</strong> function is similar to above, but it allows positive values only.</li>
+                <li>A similar application is <strong>String.substr(starting position, number of characters)</strong> function.</li>
+                <li>Contents of a string can be changed using <strong>String.replace("Replaced string","Replacement string")</strong> function.</li>
+                <li>String can be transformed to uppercase or lowercase using <strong>String.toUpperCase() or String.toLowerCase()</strong> function respectively.</li>
+                <li><strong>String.concat("String to add")</strong> is useless function because we have + operator.</li>
+                <li><strong>String.trim()</strong> function is used to remove white spaces from beginning and the end in a string.</li>
+                <li><strong>String.charAt(index)</strong> function is used to get the character at given index of string.</li>
+            </ul>
+        </div><hr>
+
+        <h1>Conditionals(if-else & switch-case)</h1>
+        <div class="cont1.5">
+            <p>if-else and switch-case statements in JS works same as C. It is to be noted that switch-case is prefered over if-else because of smaller time complexity. break statement also have the same task as that in c language.</p>
+        </div><hr>
+
+        <h1>Objects and Arrays in JS</h1>
+        <div class="cont1.6">
+            <p>Objects contains lot of information in terms of key value pairs. A similar implementation is dictionary in python. Array are declared in a similar fashion as in C. There are methods to access individual element of an Array or an object. Their are various functions for Array. One important function is <strong>String.push("item to be pushed")</strong> which changes the String.</p>
+        </div><hr>
+        
+        <h1>Loops (for, forEach, while, do while)</h1>
+        <div class="cont1.6">
+            <p>Various loops in JS will be discussed in this section. Most of them are similar to C language. Looping on array is demonstrated. It os interesting to see the use of <strong>"for of"</strong>loop provided by mordern JavaScript.</p>
+        </div><hr>
+
+        
+
+
+    </div>
+
+    <script>
+        console.log("This is my first Java Script");
+        // Dynamic typing in JS (no data types)
+        var a = 66;
+        b = "Siddharth";
+        let c = 22.67;
+        console.log(a);
+        console.log(b);
+        console.log(c);
+        // Unary operator
+        c = -c;
+        console.log(c);
+        console.log(c++);
+        console.log(++c);
+        // Binary operator
+        c = a + c;
+        console.log("New value of c after adding c is " + c);
+        console.log("Printing 2^4");
+        console.log(2**4);
+        
+        // Strings
+        a = "NoSpace1";
+        b = "NoSpace2";
+        c = "NoSpace3";
+        console.log(a + b + c);
+        var temp = "${a} is incorrect format inside single and double quotes";
+        console.log(temp);
+        var temp = `${a}, ${b} or ${c} is correct format inside this special symbol`;
+        console.log(temp);
+        temp = `Using "double" and 'single' quotes togather`;
+        console.log(temp);
+        console.log("I want to add a new line here.\nAnd this is the new line.");
+
+        // Scope and Functions
+        console.log("value of a outside scope is..." + a);
+        {
+            a = 24;
+            console.log("value of a inside scope is..." + a);
+        }
+        console.log("value of a outside scope is changed..." + a +" .This happened because of the 'var' keyword."); // Doubt
+        
+        console.log("value of c outside scope is..." + c);
+        {
+            c = 77;
+            console.log("value of c inside scope is..." + c);
+        }
+        console.log("value of c outside scope is not changed..." + c +" .This happened because of the 'let' keyword."); // Doubt
+        const d = 33;
+        console.log("fixed value of d is..." + d + " everywhere. Changing this value will now give an error.");
+
+        function myFunc(myVar = "default value"){ // we can provide default value as well
+            console.log("The item you want to print is..." + myVar);
+        }
+        myFunc(a);
+        myFunc(b);
+        myFunc(c);
+        myFunc(d);
+        myFunc(); // get default value
+
+        function mySum(a,b,c){ // function with return
+            return(a+b+c);
+        }
+        console.log("The sum is " + mySum(5,7,8));
+
+        // String functions
+        console.log(`Length of 'temp' variable is ${temp.length} characters`);
+        console.log(`First occorance of "and" in temp variable is at index ${temp.indexOf("and")}`);
+        console.log(`Extracting "and" from temp variable by giving it's starting and ending index gives "${temp.slice(15,18)}"`);
+        console.log(`Extracting "and" from temp variable by giving it's starting index and 3 terms gives "${temp.substr(15,3)}"`);
+        temp = "This is my first Java Script";
+        console.log(`Original string was "${temp}". Going to print replaced string in next line. ${temp.replace("my first","a new")}`);
+        console.log("temp string in upper case is " + temp.toUpperCase());
+        console.log("temp string in lower case is " + temp.toLowerCase());
+        temp = "  two spaces in beginning and 3 spaces in the end   ";
+        console.log(temp + "'temp' string in trimmed form is " + temp.trim());
+        console.log("I want o, which is at index 4 of temp like this..." + temp.charAt(4));
+
+        // Conditionals
+        let age = 30;
+        if(age > 18) console.log("Your age is "+ age +". You are allowed to drink!");
+        else console.log("Your age is "+ age +". You are not allowed to drink!");
+        age = 13;
+        if(age > 18) console.log("Your age is "+ age +". You are allowed to drink!");
+        else console.log("Your age is "+ age +". You are not allowed to drink!");
+        age = 18;
+        if(age > 18) console.log("Your age is "+ age +". You are allowed to drink!");
+        else if(age == 18) console.log("Your age is "+ age +". I have no idea.");
+        else console.log("Your age is "+ age +". You are not allowed to drink!");
+        a = 2;
+        switch (a) {
+            case 1: console.log("Your input is 1"); break;
+            case 2: console.log("Your input is 2");
+            case 2: console.log("Your input is 3");
+            default: console.log("Your input is invalid");
+        }
+
+        // Arrays and Objects
+        let myArray = [0, 1, 2, "Sid", 4, "Ajay", 6];
+        console.log(myArray[3] + myArray[5]);
+        let newArr = new Array(undefined, 30, 17, 2, "Sid", 4, "Ajay", 6);
+        console.log(newArr);
+        console.log(newArr.length);
+        console.log(newArr.sort());
+        newArr.push("pushed");
+        console.log(newArr);
+        
+        let myObject = {
+            name : "Siddharth",
+            age : 28,
+            salary : "8 lakhs",
+            occupation : "Blockchain Developer",
+        };
+        console.log(myObject);
+        console.log(myObject.age);
+        console.log(myObject['salary']);
+        
+        // Loops (for, for of, forEach, while, do while)
+        for(let i = 0; i<3 ; i++) console.log(i);
+        let names = ["Name1","Name2","Name3","Name4"];
+        for(let i = 0; i < names.length ; i++) console.log(names[i]);
+
+        names.forEach(function f(element) { console.log(element) });
+
+        for(element of names) console.log(element);
+
+        for(key in myObject){ // to iterate over an object
+            console.log(`Element corrosponding to ${key} is.. ${myObject[key]} in myObject`);
+        }
+
+        let i = 0;
+        while(i < names.length){
+            console.log(names[i]);
+            i++;
+        }
+
+        do console.log("This statement will be printed atleast once regardless of the while condition!");
+        while(0);
+
+
+
+
+    </script>
+</body>
+</html>

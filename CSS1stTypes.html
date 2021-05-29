@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!-- Tutorial 14: Code with Harry -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Tutorial</title>
+    <!-- Using Internal CSS, remove important to make Internal<External -->
+    <style>
+        p {color:white; background-color: green !important;}
+    </style>
+    <!-- Move external css link above style tag to priortize internal -->
+    <link rel="stylesheet" href="1first.css">
+</head>
+<body>
+    <h1>This is CSS Tutorial</h1>
+    <p style="color: red; background-color: yellow">This is the way of adding Inline CSS using style attribute.
+    <br>It is recommended to avoid inline CSS, because ot makes our HTML messy.</p>
+    <p>This is an example of internal CSS. Notice that Inline CSS overpowers internal CSS.</p>
+
+</body>
+</html>

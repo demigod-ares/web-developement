@@ -1,0 +1,121 @@
+<!-- Types of CSS selectors 1. element 2. ID 3. class 4. Grouping -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Complete</title>
+    <style>
+        p{color: navy; border: 1px solid green;}
+        #purpleC{color: blueviolet;}
+        #blueC{color: blue; height: 50px; width: 500px; border-radius: 3px;}
+        .redC{color: red; border-top: 2px solid blue; border-top-right-radius: 10px;}
+        .greenC{color: green; background-image: url("http://www.clker.com/cliparts/2/b/3/8/1197149700505366957Gerald_G_Parchment_Background_or_Border_1.svg.med.png"); background-repeat: no-repeat; background-position: center center; height: 250px; width:300px;}
+        .whiteC{color: white;}
+        .blackBG{background-color: black;}
+        .class2{color: yellow; background-color:red;}
+        header, footer {color: cyan; background-color:brown; border: 2px solid blue;}
+        /* Comment in CSS are given like this. */
+        h6{font-family: cursive;}
+        .divContainer{background-color: aqua; border: 2px solid black; padding-left: 10px; margin: 5px; box-sizing: border-box;}
+        /* padding/margin = top bottom left right; OR padding/margin = y(top/bottom) x(left/right);*/
+        .divCont2{border: 1px solid black; margin: 5px; padding: 10px; background: cyan; width: 550px; margin: auto;}
+        .myClass{border: 2px solid gray; margin: 5px; padding: 10px; background: yellow;}
+        .third{}
+        .fourth{}
+        #ID1{float: left; width: 40%;}
+        #ID2{float: right; width: 40%;}
+        #ID3{clear: left;}
+        #third{text-align: center;}
+        #fourth{text-align: right;}
+        #fifth{text-align: justify;}
+        .button{color: #60DCA4; background-color: black; cursor: pointer;}
+        a:hover{color: black; background-color: white;}
+        a:visited{color: purple; background-color: white;}
+        .navBar{background-color: red; border-radius: 10px;}
+        .navBar ul{overflow: auto;}
+        .navBar li{float: left; list-style: none; margin: 5px;}
+        .navBar li a{padding: 3px 3px; color: white; text-decoration: none;}
+        #searchBox{float: right;}
+        #image1{background-color: red;}
+        #imgPara{background-color: red; width: 400px; margin: auto; display: block;}
+    </style>
+</head>
+<body>
+    <header>This is header. This will demonstrate grouping selector.</header><hr>
+    
+    <h1>CSS selectors</h1>
+    <p> Simple paragraph to demonstrate CSS  Element selectors.</p>
+    <p id="purpleC"> Simple paragraph to demonstrate CSS ID selectors.</p>
+    <p id="blueC"> Simple paragraph to demonstrate CSS ID selectors. Noth that this class has 50px height and 500px width. 3px is the border radius.</p>
+    <p class="redC"> Simple paragraph to demonstrate CSS Class selectors. This paragraph has top border overwritten and has top-tight border radius of 10 px</p>
+    <p class="greenC"> Simple paragraph to demonstrate CSS Class selectors. This paragraph has background image.</p>
+    <p class="whiteC blackBG"> Simple paragraph to demonstrate CSS Multi-Class selectors.</p>
+    <p class="class2"> Simple paragraph to demonstrate CSS Class (with 2 attributes) selectors.</p><hr>
+    
+    <h1>CSS Fonts, Border and Background</h1>
+    <h6>Let's play with fonts! This is h6 with cursive font style defined in internal CSS.</h6>
+    <p style ="font-size:14px;">This is paragraph 2 with 14px font size. What are web-safe fonts?</p>
+    <h6 style="line-height:8.5em; font-weight: bold;">This is bold font-weighted h6 with line height 8.5 em. What are web fonts?</h6>
+    <h6 style ="font-family: 'Times New Roman', Times, serif; font-size:14px;">This is h6 with 14px and Times new roman family with stacking. What are fonts stacking?</h6><hr>
+    
+    <h1>Colors in CSS</h1>
+    <div style="color: rgb(0,0,255);">This content is inside div tag with rgb colourig scheme.</div>
+    <div style="color: rgb(#60DCA4);">This is another div tag with hex colourig scheme.</div>
+    <hr><footer>This is Footer. This will demonstrate grouping selector.</footer><hr>
+
+    <h1>Box Model, Margin and Padding</h1>
+    <div class="divContainer">
+        <h3>first h3</h3>
+        <p id="first">This is first paragraph in div tag.</p>
+    </div>
+    <div class="divContainer">
+        <h3>second h3</h3>
+        <p id="second">This is second paragraph in div tag.</p>
+    </div><hr>
+    
+    <h1>Float and Clear</h1>
+    <div class="divCont2"> divCont2
+        <div id="ID1" class="myClass">
+        <h3>third h3</h3>
+        <p id="third" class="third">This is 3rd paragraph in div tag. Floating left with 40% width.</p>
+        </div>
+        <div id="ID2" class="myClass">
+        <h3>fourth h3</h3>
+        <p id="fourth" class="fourth">This is 4th paragraph in div tag. Lorem ipsum dolor sit amet consectetur adipisicing elit. In harum quisquam saepe explicabo. Neque cumque atque excepturi laborum exercitationem. Nostrum!</p>
+        </div>
+        <div id="ID3" class="myClass">
+        <h3>fifth h3</h3>
+        <p id="fifth" class="fifth">This is 5th paragraph in div tag. This shows fucked up stuff inside div2 container if we dont use clear command for div.</p>
+        </div>
+    </div><hr>
+
+    <h1>Styling links and Buttons</h1>
+    <div class="divCont2"> inside divCont2
+        <div id="ID4" class="myClass">
+        <h3>sixth h3</h3>
+        <p id="sixth" class="sixth">This is 6th paragraph in div tag. Floating left with 40% width.</p>
+        <a href="https://www.google.com" class="button">read more...</a>
+        <button href="https://www.youtube.com">Contact Us...</button>
+        </div>
+    </div><hr>
+
+    <h1>Navigation Bar</h1>
+    <nav class="navBar"><ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Departments</a></li>
+        <li><a href="#">Contact us</a></li>
+        <div id="searchBox">Search here! <input type="text" name="Search"></div>
+    </ul></nav><hr>
+
+    <h1>CSS Display properties</h1>
+    
+    <img src="http://www.clker.com/cliparts/2/b/3/8/1197149700505366957Gerald_G_Parchment_Background_or_Border_1.svg.med.png" alt="No fucking idea" id="image1">
+    <p id="imgPara">This is some random paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, perferendis! Maiores laboriosam minus dolorem pariatur! Cupiditate ut cumque iusto, eum saepe, ad ducimus repellendus delectus omnis quos, minus quod culpa.</p>
+    
+
+</body>
+</html>

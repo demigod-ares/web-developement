@@ -1,0 +1,10 @@
+/*  Avoid HTML attributes for design or inline CSS, and use CSS(Cascading Style Sheet) for design
+    CSS syntax is p{color: blue;} or selector tag, class or ID{property:value;}
+    There are three ways to add CSS to the markup(HTML)
+    1. Inline CSS (given in CSS.html)   2. Internal CSS (given in CSS.html)     3. External CSS (This is an external CSS used in 1first.html) */
+
+p{
+    color: grey;
+    background-color: aqua;
+}
+

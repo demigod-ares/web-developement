@@ -1,0 +1,136 @@
+<!-- typing ! will provide you Emmet option -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Description is shown with your link in web browser -->
+    <meta name="description" content="This is my first web page!">
+    <!-- Keywords allow search engine optimization -->
+    <meta name="keywords" content="html, html tutorials, web developement">
+    <!-- Robots leave spiders to crawl through the page -->
+    <meta name="robots" content="INDEX, FOLLOW">
+
+    <title>My first webpage!</title>
+
+    <!-- This is how you include external CSS -->
+    <link rel="stylesheet" href="1first.css">
+    <!-- This is how you include external JavaScript -->
+    <script src="1first.js"></script>
+</head>
+<body>
+    Yo! SUP??? This is my first webpage!
+    <h1>This is Heading level 1</h1>
+    <h2>This is Heading level 2</h2>
+    <h3>This is Heading level 3</h3>
+    <h4>This is Heading level 4</h4>
+    <h5>This is Heading level 5</h5>
+    <h6>This is Heading level 6</h6><hr>
+    <p>This is the paragraph. You may add multiple lines but in the end all the lines will be shown as a single paragraph on your browser. Like this line. And this!
+    The fun part is even if you press space, tab or return key in the code editor, the browser ain't going to give a shit! Like this! But in case you want to use line break use br tag. <br> br is a self closing tag.
+    <strong> This is Strong text!</strong>
+    <em> And this text is emphasized.</em>
+    <b> strong tag is preferred over bold </b>
+    However hr tag will introduce a horizontal ruled line like this. hr tag is also self closing. <hr>
+    You may use "Lorem(integer) from Emmet to generate random words, I will try this in the next paragraph, which is going to generate 50 random words"</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias similique, enim eos odit necessitatibus delectus quam optio suscipit maxime doloremque praesentium ex omnis quasi, voluptatibus eum alias consequatur ipsam quas ad saepe obcaecati magnam tempora iste aliquam. Dolores omnis ipsum rem distinctio illum in expedita? Quam fugit sit numquam quia?</p><hr>
+    
+    <h1>Adding Links, HTML and Images</h1>
+    <p>Click <a href="https://www.google.com">here</a> to visit Google search home</p>
+    <p>Click <a href="https://www.facebook.com" target="_blank">here</a> to visit Facebook official website. Note that target attribute is set to "_blank", so the link will open in new tab.</p>
+    <p>Click <a href="/2second.html">here</a> to go to the 2nd page created by me!</p>
+    <img src="sid.jpg" alt="This image do not exist!"><br><br><br>
+    <img src="https://source.unsplash.com/400x300/?nature,water" alt="Images related to water by Unsplash"><br>
+    <p>Above picture will show images related to water by Unsplash</p><hr>
+    
+    <h1>Lists and Tables</h1>
+    <p> Every item in List is a "Block element".</p>
+    <p>Unordered list looks like this. In type... disc, square and circle are allowed</p>
+    <ul type="square">
+        <li>First item</li>
+        <li>Second item</li>
+            <ul>
+                <li>Number one sub-item</li>
+                <li>Number two sub-item</li>
+                <li>Number three sub-item</li>
+            </ul>
+        <li>Third item</li>
+    </ul>
+    <p>Ordered list looks like this
+    <ol type="A">
+        <li>First item</li>
+        <li>Second item</li>
+        <li>Third item</li>
+    </ol></p>
+    <p>This is how we insert a table in a HTML file. <br> Each row in table is a "Block element". Other elements are "Inline".</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Emp. ID</th>
+                <th>Emp. name</th>
+                <th>Designation</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Siddharth</td>
+                <td>Developer</td>
+            </tr>
+            <tr><td>002</td>
+                <td>Shweta</td>
+                <td>Accountant</td>
+            </tr>
+            <tr><td>999</td>
+                <td>Avnish</td>
+                <td>Sweeper</td>
+            </tr>
+        </tbody>
+    </table><hr>
+
+    <h1>Forms and Input tags</h1>
+    <form action="backend.php">
+        <div>Focus on the "div element". We are not using "browser"</div>
+        <div>Name: <input type="text" name="myName"></div>
+        <div><label for="label">Click here to fill: </label><input type="text" name="myLabel" id="label"></div>
+        <div><label for="select">Select: </label><select name="mySelection" id="select">
+            <option value="opt1" selected>Option 1</option>
+            <option value="opt2">Option 2</option>
+            <option value="opt3">Option 3</option>
+        </select></div>
+        <div>Designation: <input type="text" name="myRole"></div>
+        <div>Email: <input type="email" name="myEmail"></div>
+        <div>DOB: <input type="date" name="myDate"></div>
+        <div>Gender: Male<input type="radio" name="myGender">
+            Female<input type="radio" name="myGender"> Other<input type="radio" name="myGender"></div>
+        <div>Feedback:<br><textarea name="myFeedback" rows="5" cols="70"></textarea></div>
+        <div>Do you agree to our terms & conditions <input type="checkbox" name="myAcceptance" checked></div>
+        <div><input type="submit" value="Submit Now!"> <input type="reset" value="RESET!"></div>
+    </form><hr>
+    
+    <h1>Inline and Block Elements</h1><br>
+    <span style="border: 2px solid blue">"Span" is Inline element. </span><span  style="border: 2px solid blue">So this text will be added in the same line. </span><strong style="border: 2px solid blue"> "Strong" is also an inline element. </strong>
+    <bold style="border: 2px solid blue"> "Bold" is also an inline element. </bold><a style="border: 2px solid blue"> "Ancor" is also an inline element. </a>
+    <p style="border: 2px solid red">However, "paragraph" is a Block element. And so, it always starts a new line</p><hr>
+
+    <h1>IDs(Identifier) and Classes</h1>
+    <p>CSS and Javascript uses Classes and IDs</p>
+    <!-- In Emmet . is used for class and # is used for ID. Emmet adds div tag as default -->
+    <div id="mainBox" class="colorRed">IDs are unique.</div>
+    <div id="newBox" class="colorRed boderBlack">Multiple classes are allowed for same element.</div><hr>
+
+    <h1>Entities</h1>
+    <div class="comtainer">
+        <p>This is a paragraph. I am using nbsp (non breaking space) entity twice before &nbsp; &nbsp;here.</p>
+        <p>This is another paragraph. But we will have to use lt and gt entities to show the paragraph tag like this &lt;p&gt;</p>
+        <p>Pound sign is given as &pound;</p><p>Copyright sign is given as &copy;</p><hr>
+    </div>
+
+    <h1>Semantic Tags</h1>
+    <img src="https://s3.amazonaws.com/viking_education/web_development/web_app_eng/html5_sectioning_high_level.jpg" alt="HTML 5 Semantic Tags">
+    <p>These tags will be very important with CSS. Header, Navigation, Section, Article, Aside, Footer are the most commonly used Semantic Tags in HTML5</p>
+    <details>And this is the Answer using details tag. <summary>This is the question about content using summary tag.</summary></details>
+    
+</body>
+</html>
